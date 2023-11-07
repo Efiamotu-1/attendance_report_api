@@ -3,4 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :attendance, only: [:index, :show, :create, :destroy]
+  resources :courses, only: [:index, :show, :create, :update, :destroy]
+  post '/login', to:  "users#login"
+  post '/signup', to:  "users#signup"
+  get ':id/course-reports', to:  "courses#course_reports"
+
 end
