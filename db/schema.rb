@@ -33,7 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_28_173010) do
     t.integer "num_of_classes_held", default: 0
     t.integer "num_of_classes_attended", default: 0
     t.string "course_title"
-    t.integer "percentage", default: 100
+    t.integer "percentage", default: 0
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

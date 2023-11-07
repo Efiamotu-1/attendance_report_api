@@ -83,6 +83,4 @@ test:
 #
 production:
   <<: *default
-  database: attendance_report_api_production
-  username: attendance_report_api
-  password: <%= ENV["ATTENDANCE_REPORT_API_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
