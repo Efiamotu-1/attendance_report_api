@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :courses, only: [:index, :show, :create, :update, :destroy]
   post '/login', to:  "users#login"
   post '/signup', to:  "users#signup"
+  get '/users-count', to:  "users#index"
   get ':id/course-reports', to:  "courses#course_reports"
 
 end

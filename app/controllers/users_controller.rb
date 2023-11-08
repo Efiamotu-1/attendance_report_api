@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+    def index
+        render json: User.all.count
+    end
+
     def signup
         @user = User.create(user_params)
         if @user.save
